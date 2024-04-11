@@ -1,0 +1,43 @@
+#! /c/iverilog/bin/vvp
+:ivl_version "0.9.7 " "(v0_9_7)";
+:vpi_time_precision + 0;
+:vpi_module "system";
+:vpi_module "v2005_math";
+:vpi_module "va_math";
+S_01264190 .scope module, "halfadder_TB" "halfadder_TB" 2 5;
+ .timescale 0 0;
+v01265428_0 .var "a", 0 0;
+v01265480_0 .var "b", 0 0;
+v0126D740_0 .net "carry", 0 0, L_0126D898; 1 drivers
+v0126D798_0 .net "sum", 0 0, L_01264218; 1 drivers
+S_01263560 .scope module, "add1" "halfadder" 2 9, 3 1, S_01264190;
+ .timescale 0 0;
+L_01264218 .functor XOR 1, v01265428_0, v01265480_0, C4<0>, C4<0>;
+L_0126D898 .functor AND 1, v01265428_0, v01265480_0, C4<1>, C4<1>;
+v012635E8_0 .net "a", 0 0, v01265428_0; 1 drivers
+v01263640_0 .net "b", 0 0, v01265480_0; 1 drivers
+v01265378_0 .alias "carry", 0 0, v0126D740_0;
+v012653D0_0 .alias "sum", 0 0, v0126D798_0;
+    .scope S_01264190;
+T_0 ;
+    %vpi_call 2 13 "$dumpfile", "halfadder.vcd";
+    %vpi_call 2 14 "$dumpvars", 1'sb0, S_01264190;
+    %set/v v01265428_0, 0, 1;
+    %set/v v01265480_0, 0, 1;
+    %delay 1, 0;
+    %set/v v01265428_0, 0, 1;
+    %set/v v01265480_0, 1, 1;
+    %delay 1, 0;
+    %set/v v01265428_0, 1, 1;
+    %set/v v01265480_0, 0, 1;
+    %delay 1, 0;
+    %set/v v01265428_0, 1, 1;
+    %set/v v01265480_0, 1, 1;
+    %end;
+    .thread T_0;
+# The file index is used to find the file name in the following table.
+:file_names 4;
+    "N/A";
+    "<interactive>";
+    "halfadder_TB.v";
+    "./halfadder.v";
