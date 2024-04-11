@@ -1,0 +1,98 @@
+#! /c/iverilog/bin/vvp
+:ivl_version "0.9.7 " "(v0_9_7)";
+:vpi_time_precision + 0;
+:vpi_module "system";
+:vpi_module "v2005_math";
+:vpi_module "va_math";
+S_0121D3F8 .scope module, "sample_circuit_tb" "sample_circuit_tb" 2 3;
+ .timescale 0 0;
+v010D5170_0 .var "A", 0 0;
+v010D4C48_0 .var "B", 0 0;
+v010D4E58_0 .var "C", 0 0;
+v010D4D50_0 .var "D", 0 0;
+v010D4FB8_0 .var "E", 0 0;
+v010D5220_0 .net "Y", 0 0, L_0121B5C8; 1 drivers
+S_0121DFA8 .scope module, "uut" "sample_circuit" 2 11, 3 1, S_0121D3F8;
+ .timescale 0 0;
+L_01213668 .functor OR 1, v010D5170_0, v010D4C48_0, C4<0>, C4<0>;
+L_012184D8 .functor AND 1, v010D4E58_0, v010D4D50_0, C4<1>, C4<1>;
+L_0121B7F8 .functor NOT 1, L_01213668, C4<0>, C4<0>, C4<0>;
+L_0121B868 .functor OR 1, L_012184D8, L_0121B7F8, C4<0>, C4<0>;
+L_0121B5C8 .functor AND 1, L_0121B868, v010D4FB8_0, C4<1>, C4<1>;
+v0121ECD8_0 .net "A", 0 0, v010D5170_0; 1 drivers
+v01214638_0 .net "B", 0 0, v010D4C48_0; 1 drivers
+v01214690_0 .net "C", 0 0, v010D4E58_0; 1 drivers
+v012146E8_0 .net "D", 0 0, v010D4D50_0; 1 drivers
+v01213560_0 .net "E", 0 0, v010D4FB8_0; 1 drivers
+v012135B8_0 .net "W1", 0 0, L_01213668; 1 drivers
+v01213610_0 .net "W2", 0 0, L_012184D8; 1 drivers
+v010D5118_0 .net "W3", 0 0, L_0121B7F8; 1 drivers
+v010D4F08_0 .net "W4", 0 0, L_0121B868; 1 drivers
+v010D4F60_0 .alias "Y", 0 0, v010D5220_0;
+    .scope S_0121D3F8;
+T_0 ;
+    %vpi_call 2 21 "$dumpfile", "sample_circuit.vcd";
+    %vpi_call 2 22 "$dumpvars", 1'sb0, S_0121D3F8;
+    %set/v v010D5170_0, 0, 1;
+    %set/v v010D4C48_0, 0, 1;
+    %set/v v010D4E58_0, 0, 1;
+    %set/v v010D4D50_0, 0, 1;
+    %set/v v010D4FB8_0, 0, 1;
+    %delay 100, 0;
+    %set/v v010D5170_0, 0, 1;
+    %set/v v010D4C48_0, 0, 1;
+    %set/v v010D4E58_0, 0, 1;
+    %set/v v010D4D50_0, 0, 1;
+    %set/v v010D4FB8_0, 1, 1;
+    %delay 100, 0;
+    %set/v v010D5170_0, 0, 1;
+    %set/v v010D4C48_0, 0, 1;
+    %set/v v010D4E58_0, 0, 1;
+    %set/v v010D4D50_0, 1, 1;
+    %set/v v010D4FB8_0, 0, 1;
+    %delay 100, 0;
+    %set/v v010D5170_0, 0, 1;
+    %set/v v010D4C48_0, 0, 1;
+    %set/v v010D4E58_0, 1, 1;
+    %set/v v010D4D50_0, 0, 1;
+    %set/v v010D4FB8_0, 1, 1;
+    %delay 100, 0;
+    %set/v v010D5170_0, 0, 1;
+    %set/v v010D4C48_0, 1, 1;
+    %set/v v010D4E58_0, 0, 1;
+    %set/v v010D4D50_0, 1, 1;
+    %set/v v010D4FB8_0, 0, 1;
+    %delay 100, 0;
+    %set/v v010D5170_0, 1, 1;
+    %set/v v010D4C48_0, 0, 1;
+    %set/v v010D4E58_0, 1, 1;
+    %set/v v010D4D50_0, 0, 1;
+    %set/v v010D4FB8_0, 1, 1;
+    %delay 100, 0;
+    %set/v v010D5170_0, 1, 1;
+    %set/v v010D4C48_0, 1, 1;
+    %set/v v010D4E58_0, 0, 1;
+    %set/v v010D4D50_0, 0, 1;
+    %set/v v010D4FB8_0, 0, 1;
+    %delay 100, 0;
+    %set/v v010D5170_0, 1, 1;
+    %set/v v010D4C48_0, 0, 1;
+    %set/v v010D4E58_0, 0, 1;
+    %set/v v010D4D50_0, 1, 1;
+    %set/v v010D4FB8_0, 1, 1;
+    %delay 100, 0;
+    %set/v v010D5170_0, 0, 1;
+    %set/v v010D4C48_0, 1, 1;
+    %set/v v010D4E58_0, 1, 1;
+    %set/v v010D4D50_0, 1, 1;
+    %set/v v010D4FB8_0, 1, 1;
+    %delay 100, 0;
+    %vpi_call 2 58 "$finish";
+    %end;
+    .thread T_0;
+# The file index is used to find the file name in the following table.
+:file_names 4;
+    "N/A";
+    "<interactive>";
+    "sample_circuit_TB.v";
+    "./sample_circuit.v";
