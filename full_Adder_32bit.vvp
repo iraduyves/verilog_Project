@@ -1,0 +1,770 @@
+#! /c/iverilog/bin/vvp
+:ivl_version "0.9.7 " "(v0_9_7)";
+:vpi_time_precision - 11;
+:vpi_module "system";
+:vpi_module "v2005_math";
+:vpi_module "va_math";
+S_0109F2F0 .scope module, "Testbench_Full_Adder_32bit" "Testbench_Full_Adder_32bit" 2 4;
+ .timescale -8 -11;
+v01103FB0_0 .var "A", 31 0;
+v01104008_0 .var "B", 31 0;
+v01104060_0 .var "Cin", 0 0;
+v011040B8_0 .net "Cout", 0 0, L_0110B038; 1 drivers
+RS_010CC90C/0/0 .resolv tri, L_01103A88, L_01102220, L_011026F0, L_011029B0;
+RS_010CC90C/0/4 .resolv tri, L_01102A60, L_011021C8, L_01102170, L_01102CC8;
+RS_010CC90C/0/8 .resolv tri, L_01102ED8, L_01102F30, L_01103400, L_01103560;
+RS_010CC90C/0/12 .resolv tri, L_01103140, L_01107300, L_01107250, L_01107720;
+RS_010CC90C/0/16 .resolv tri, L_01107148, L_011078D8, L_01107510, L_01106228;
+RS_010CC90C/0/20 .resolv tri, L_01105B48, L_01105FC0, L_01106120, L_01105BA0;
+RS_010CC90C/0/24 .resolv tri, L_01105F68, L_01106B70, L_01106490, L_01106C20;
+RS_010CC90C/0/28 .resolv tri, L_01106960, L_011064E8, L_01106D28, L_011066F8;
+RS_010CC90C/1/0 .resolv tri, RS_010CC90C/0/0, RS_010CC90C/0/4, RS_010CC90C/0/8, RS_010CC90C/0/12;
+RS_010CC90C/1/4 .resolv tri, RS_010CC90C/0/16, RS_010CC90C/0/20, RS_010CC90C/0/24, RS_010CC90C/0/28;
+RS_010CC90C .resolv tri, RS_010CC90C/1/0, RS_010CC90C/1/4, C4<zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz>, C4<zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz>;
+v01103770_0 .net8 "S", 31 0, RS_010CC90C; 32 drivers
+S_0109E9E8 .scope module, "DUT" "Full_Adder_32bit" 2 11, 3 5, S_0109F2F0;
+ .timescale -8 -11;
+v01103AE0_0 .net "A", 31 0, v01103FB0_0; 1 drivers
+v01103DF8_0 .net "B", 31 0, v01104008_0; 1 drivers
+RS_010CC8F4/0/0 .resolv tri, L_011023D8, L_01102900, L_01102488, L_01102380;
+RS_010CC8F4/0/4 .resolv tri, L_01102430, L_011027F8, L_01102278, L_01103668;
+RS_010CC8F4/0/8 .resolv tri, L_011033A8, L_011034B0, L_011032F8, L_011030E8;
+RS_010CC8F4/0/12 .resolv tri, L_01103718, L_011075C0, L_011072A8, L_01107778;
+RS_010CC8F4/0/16 .resolv tri, L_011073B0, L_01107098, L_011071F8, L_01106070;
+RS_010CC8F4/0/20 .resolv tri, L_01105D00, L_011063E0, L_011059E8, L_01105A98;
+RS_010CC8F4/0/24 .resolv tri, L_01105E08, L_011068B0, L_011067A8, L_01106908;
+RS_010CC8F4/0/28 .resolv tri, L_01106B18, L_01106A68, L_01106E88, C4<zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz>;
+RS_010CC8F4/1/0 .resolv tri, RS_010CC8F4/0/0, RS_010CC8F4/0/4, RS_010CC8F4/0/8, RS_010CC8F4/0/12;
+RS_010CC8F4/1/4 .resolv tri, RS_010CC8F4/0/16, RS_010CC8F4/0/20, RS_010CC8F4/0/24, RS_010CC8F4/0/28;
+RS_010CC8F4 .resolv tri, RS_010CC8F4/1/0, RS_010CC8F4/1/4, C4<zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz>, C4<zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz>;
+v01103E50_0 .net8 "C", 30 0, RS_010CC8F4; 31 drivers
+v01103878_0 .net "Cin", 0 0, v01104060_0; 1 drivers
+v01103C98_0 .alias "Cout", 0 0, v011040B8_0;
+v01103F58_0 .alias "S", 31 0, v01103770_0;
+L_01103820 .part v01103FB0_0, 0, 1;
+L_011038D0 .part v01104008_0, 0, 1;
+L_01103A88 .part/pv L_010AA550, 0, 1, 32;
+L_011023D8 .part/pv L_010AA6D8, 0, 1, 31;
+L_01102B68 .part v01103FB0_0, 1, 1;
+L_011022D0 .part v01104008_0, 1, 1;
+L_01102BC0 .part RS_010CC8F4, 0, 1;
+L_01102220 .part/pv L_010B5D18, 1, 1, 32;
+L_01102900 .part/pv L_010B5CA8, 1, 1, 31;
+L_01102850 .part v01103FB0_0, 2, 1;
+L_01102538 .part v01104008_0, 2, 1;
+L_011027A0 .part RS_010CC8F4, 1, 1;
+L_011026F0 .part/pv L_010B5C38, 2, 1, 32;
+L_01102488 .part/pv L_010B5998, 2, 1, 31;
+L_011028A8 .part v01103FB0_0, 3, 1;
+L_011024E0 .part v01104008_0, 3, 1;
+L_01102B10 .part RS_010CC8F4, 2, 1;
+L_011029B0 .part/pv L_010B5F80, 3, 1, 32;
+L_01102380 .part/pv L_010B5A40, 3, 1, 31;
+L_01102590 .part v01103FB0_0, 4, 1;
+L_011025E8 .part v01104008_0, 4, 1;
+L_01102A08 .part RS_010CC8F4, 3, 1;
+L_01102A60 .part/pv L_010BE970, 4, 1, 32;
+L_01102430 .part/pv L_010BE890, 4, 1, 31;
+L_01102640 .part v01103FB0_0, 5, 1;
+L_01102AB8 .part v01104008_0, 5, 1;
+L_01102698 .part RS_010CC8F4, 4, 1;
+L_011021C8 .part/pv L_010BEE08, 5, 1, 32;
+L_011027F8 .part/pv L_010BED60, 5, 1, 31;
+L_01102748 .part v01103FB0_0, 6, 1;
+L_01102958 .part v01104008_0, 6, 1;
+L_01102C18 .part RS_010CC8F4, 5, 1;
+L_01102170 .part/pv L_010BEFC8, 6, 1, 32;
+L_01102278 .part/pv L_010BEBA0, 6, 1, 31;
+L_01102328 .part v01103FB0_0, 7, 1;
+L_01103610 .part v01104008_0, 7, 1;
+L_01103350 .part RS_010CC8F4, 6, 1;
+L_01102CC8 .part/pv L_011044C0, 7, 1, 32;
+L_01103668 .part/pv L_01104530, 7, 1, 31;
+L_01102E80 .part v01103FB0_0, 8, 1;
+L_01102E28 .part v01104008_0, 8, 1;
+L_01103248 .part RS_010CC8F4, 7, 1;
+L_01102ED8 .part/pv L_011041B0, 8, 1, 32;
+L_011033A8 .part/pv L_01104760, 8, 1, 31;
+L_01103038 .part v01103FB0_0, 9, 1;
+L_01102D20 .part v01104008_0, 9, 1;
+L_01103090 .part RS_010CC8F4, 8, 1;
+L_01102F30 .part/pv L_01104E18, 9, 1, 32;
+L_011034B0 .part/pv L_011048B0, 9, 1, 31;
+L_01102F88 .part v01103FB0_0, 10, 1;
+L_011031F0 .part v01104008_0, 10, 1;
+L_01102D78 .part RS_010CC8F4, 9, 1;
+L_01103400 .part/pv L_01104F30, 10, 1, 32;
+L_011032F8 .part/pv L_01104EF8, 10, 1, 31;
+L_011036C0 .part v01103FB0_0, 11, 1;
+L_01103508 .part v01104008_0, 11, 1;
+L_01103458 .part RS_010CC8F4, 10, 1;
+L_01103560 .part/pv L_01104A60, 11, 1, 32;
+L_011030E8 .part/pv L_01104B40, 11, 1, 31;
+L_011032A0 .part v01103FB0_0, 12, 1;
+L_01102FE0 .part v01104008_0, 12, 1;
+L_01102C70 .part RS_010CC8F4, 11, 1;
+L_01103140 .part/pv L_01105498, 12, 1, 32;
+L_01103718 .part/pv L_01105460, 12, 1, 31;
+L_011035B8 .part v01103FB0_0, 13, 1;
+L_01103198 .part v01104008_0, 13, 1;
+L_01102DD0 .part RS_010CC8F4, 12, 1;
+L_01107300 .part/pv L_01105578, 13, 1, 32;
+L_011075C0 .part/pv L_011053B8, 13, 1, 31;
+L_01107618 .part v01103FB0_0, 14, 1;
+L_01107670 .part v01104008_0, 14, 1;
+L_01106FE8 .part RS_010CC8F4, 13, 1;
+L_01107250 .part/pv L_01105888, 14, 1, 32;
+L_011072A8 .part/pv L_011055B0, 14, 1, 31;
+L_01106F90 .part v01103FB0_0, 15, 1;
+L_01107040 .part v01104008_0, 15, 1;
+L_011076C8 .part RS_010CC8F4, 14, 1;
+L_01107720 .part/pv L_01107CE0, 15, 1, 32;
+L_01107778 .part/pv L_01107AB0, 15, 1, 31;
+L_01107828 .part v01103FB0_0, 16, 1;
+L_01107460 .part v01104008_0, 16, 1;
+L_011077D0 .part RS_010CC8F4, 15, 1;
+L_01107148 .part/pv L_01107D50, 16, 1, 32;
+L_011073B0 .part/pv L_01107FF0, 16, 1, 31;
+L_011071A0 .part v01103FB0_0, 17, 1;
+L_01107358 .part v01104008_0, 17, 1;
+L_01107880 .part RS_010CC8F4, 16, 1;
+L_011078D8 .part/pv L_01108830, 17, 1, 32;
+L_01107098 .part/pv L_01108098, 17, 1, 31;
+L_011070F0 .part v01103FB0_0, 18, 1;
+L_011074B8 .part v01104008_0, 18, 1;
+L_01107408 .part RS_010CC8F4, 17, 1;
+L_01107510 .part/pv L_01108868, 18, 1, 32;
+L_011071F8 .part/pv L_011087C0, 18, 1, 31;
+L_01107568 .part v01103FB0_0, 19, 1;
+L_01106018 .part v01104008_0, 19, 1;
+L_01106330 .part RS_010CC8F4, 18, 1;
+L_01106228 .part/pv L_011082B8, 19, 1, 32;
+L_01106070 .part/pv L_011083D0, 19, 1, 31;
+L_01105DB0 .part v01103FB0_0, 20, 1;
+L_011062D8 .part v01104008_0, 20, 1;
+L_01105F10 .part RS_010CC8F4, 19, 1;
+L_01105B48 .part/pv L_011096C8, 20, 1, 32;
+L_01105D00 .part/pv L_01109738, 20, 1, 31;
+L_01106388 .part v01103FB0_0, 21, 1;
+L_01105A40 .part v01104008_0, 21, 1;
+L_011060C8 .part RS_010CC8F4, 20, 1;
+L_01105FC0 .part/pv L_01109540, 21, 1, 32;
+L_011063E0 .part/pv L_01109230, 21, 1, 31;
+L_01105AF0 .part v01103FB0_0, 22, 1;
+L_01105EB8 .part v01104008_0, 22, 1;
+L_01105D58 .part RS_010CC8F4, 21, 1;
+L_01106120 .part/pv L_011095B0, 22, 1, 32;
+L_011059E8 .part/pv L_01109460, 22, 1, 31;
+L_01106178 .part v01103FB0_0, 23, 1;
+L_01106280 .part v01104008_0, 23, 1;
+L_01105CA8 .part RS_010CC8F4, 22, 1;
+L_01105BA0 .part/pv L_01109000, 23, 1, 32;
+L_01105A98 .part/pv L_01108D98, 23, 1, 31;
+L_011061D0 .part v01103FB0_0, 24, 1;
+L_01106438 .part v01104008_0, 24, 1;
+L_01105990 .part RS_010CC8F4, 23, 1;
+L_01105F68 .part/pv L_01108BD8, 24, 1, 32;
+L_01105E08 .part/pv L_01108A18, 24, 1, 31;
+L_01105BF8 .part v01103FB0_0, 25, 1;
+L_01105C50 .part v01104008_0, 25, 1;
+L_01105E60 .part RS_010CC8F4, 24, 1;
+L_01106B70 .part/pv L_01108D28, 25, 1, 32;
+L_011068B0 .part/pv L_01108AC0, 25, 1, 31;
+L_01106DD8 .part v01103FB0_0, 26, 1;
+L_01106A10 .part v01104008_0, 26, 1;
+L_01106648 .part RS_010CC8F4, 25, 1;
+L_01106490 .part/pv L_01109C18, 26, 1, 32;
+L_011067A8 .part/pv L_01109B70, 26, 1, 31;
+L_01106540 .part v01103FB0_0, 27, 1;
+L_01106BC8 .part v01104008_0, 27, 1;
+L_01106AC0 .part RS_010CC8F4, 26, 1;
+L_01106C20 .part/pv L_011099B0, 27, 1, 32;
+L_01106908 .part/pv L_01109EF0, 27, 1, 31;
+L_011069B8 .part v01103FB0_0, 28, 1;
+L_01106800 .part v01104008_0, 28, 1;
+L_01106C78 .part RS_010CC8F4, 27, 1;
+L_01106960 .part/pv L_0110A628, 28, 1, 32;
+L_01106B18 .part/pv L_0110A580, 28, 1, 31;
+L_01106D80 .part v01103FB0_0, 29, 1;
+L_01106858 .part v01104008_0, 29, 1;
+L_011065F0 .part RS_010CC8F4, 28, 1;
+L_011064E8 .part/pv L_0110A698, 29, 1, 32;
+L_01106A68 .part/pv L_0110A510, 29, 1, 31;
+L_01106F38 .part v01103FB0_0, 30, 1;
+L_01106E30 .part v01104008_0, 30, 1;
+L_01106CD0 .part RS_010CC8F4, 29, 1;
+L_01106D28 .part/pv L_0110A4D8, 30, 1, 32;
+L_01106E88 .part/pv L_0110A238, 30, 1, 31;
+L_01106EE0 .part v01103FB0_0, 31, 1;
+L_01106598 .part v01104008_0, 31, 1;
+L_011066A0 .part RS_010CC8F4, 30, 1;
+L_011066F8 .part/pv L_0110B380, 31, 1, 32;
+S_010A0478 .scope module, "FA0" "Full_Adder_Structural_Verilog" 3 15, 4 4, S_0109E9E8;
+ .timescale -8 -11;
+L_010AA908 .functor XOR 1, L_01103820, L_011038D0, C4<0>, C4<0>;
+L_010AA630 .functor AND 1, L_01103820, L_011038D0, C4<1>, C4<1>;
+L_010AA668 .functor AND 1, L_010AA908, v01104060_0, C4<1>, C4<1>;
+L_010AA6D8 .functor OR 1, L_010AA630, L_010AA668, C4<0>, C4<0>;
+L_010AA550 .functor XOR 1, L_010AA908, v01104060_0, C4<0>, C4<0>;
+v01103A30_0 .alias "Cin", 0 0, v01103878_0;
+v01103928_0 .net "Cout", 0 0, L_010AA6D8; 1 drivers
+v01103BE8_0 .net "S", 0 0, L_010AA550; 1 drivers
+v01103DA0_0 .net "X1", 0 0, L_01103820; 1 drivers
+v01103B90_0 .net "X2", 0 0, L_011038D0; 1 drivers
+v01103980_0 .net "a1", 0 0, L_010AA908; 1 drivers
+v01103C40_0 .net "a2", 0 0, L_010AA630; 1 drivers
+v011039D8_0 .net "a3", 0 0, L_010AA668; 1 drivers
+S_010A03F0 .scope module, "FA1" "Full_Adder_Structural_Verilog" 3 18, 4 4, S_0109E9E8;
+ .timescale -8 -11;
+L_010AAA58 .functor XOR 1, L_01102B68, L_011022D0, C4<0>, C4<0>;
+L_010AAA90 .functor AND 1, L_01102B68, L_011022D0, C4<1>, C4<1>;
+L_010B5EA0 .functor AND 1, L_010AAA58, L_01102BC0, C4<1>, C4<1>;
+L_010B5CA8 .functor OR 1, L_010AAA90, L_010B5EA0, C4<0>, C4<0>;
+L_010B5D18 .functor XOR 1, L_010AAA58, L_01102BC0, C4<0>, C4<0>;
+v01101CC0_0 .net "Cin", 0 0, L_01102BC0; 1 drivers
+v01101DC8_0 .net "Cout", 0 0, L_010B5CA8; 1 drivers
+v01103D48_0 .net "S", 0 0, L_010B5D18; 1 drivers
+v01103F00_0 .net "X1", 0 0, L_01102B68; 1 drivers
+v01103EA8_0 .net "X2", 0 0, L_011022D0; 1 drivers
+v011037C8_0 .net "a1", 0 0, L_010AAA58; 1 drivers
+v01103B38_0 .net "a2", 0 0, L_010AAA90; 1 drivers
+v01103CF0_0 .net "a3", 0 0, L_010B5EA0; 1 drivers
+S_010A0258 .scope module, "FA2" "Full_Adder_Structural_Verilog" 3 21, 4 4, S_0109E9E8;
+ .timescale -8 -11;
+L_010B5C70 .functor XOR 1, L_01102850, L_01102538, C4<0>, C4<0>;
+L_010B5B20 .functor AND 1, L_01102850, L_01102538, C4<1>, C4<1>;
+L_010B5F10 .functor AND 1, L_010B5C70, L_011027A0, C4<1>, C4<1>;
+L_010B5998 .functor OR 1, L_010B5B20, L_010B5F10, C4<0>, C4<0>;
+L_010B5C38 .functor XOR 1, L_010B5C70, L_011027A0, C4<0>, C4<0>;
+v01102030_0 .net "Cin", 0 0, L_011027A0; 1 drivers
+v01101F80_0 .net "Cout", 0 0, L_010B5998; 1 drivers
+v01102088_0 .net "S", 0 0, L_010B5C38; 1 drivers
+v01101ED0_0 .net "X1", 0 0, L_01102850; 1 drivers
+v011020E0_0 .net "X2", 0 0, L_01102538; 1 drivers
+v01101C68_0 .net "a1", 0 0, L_010B5C70; 1 drivers
+v01101FD8_0 .net "a2", 0 0, L_010B5B20; 1 drivers
+v01101D70_0 .net "a3", 0 0, L_010B5F10; 1 drivers
+S_010A0368 .scope module, "FA3" "Full_Adder_Structural_Verilog" 3 24, 4 4, S_0109E9E8;
+ .timescale -8 -11;
+L_010B5928 .functor XOR 1, L_011028A8, L_011024E0, C4<0>, C4<0>;
+L_010B5960 .functor AND 1, L_011028A8, L_011024E0, C4<1>, C4<1>;
+L_010B5A08 .functor AND 1, L_010B5928, L_01102B10, C4<1>, C4<1>;
+L_010B5A40 .functor OR 1, L_010B5960, L_010B5A08, C4<0>, C4<0>;
+L_010B5F80 .functor XOR 1, L_010B5928, L_01102B10, C4<0>, C4<0>;
+v011016E8_0 .net "Cin", 0 0, L_01102B10; 1 drivers
+v01101950_0 .net "Cout", 0 0, L_010B5A40; 1 drivers
+v01101740_0 .net "S", 0 0, L_010B5F80; 1 drivers
+v01101798_0 .net "X1", 0 0, L_011028A8; 1 drivers
+v01101E78_0 .net "X2", 0 0, L_011024E0; 1 drivers
+v01101F28_0 .net "a1", 0 0, L_010B5928; 1 drivers
+v01101E20_0 .net "a2", 0 0, L_010B5960; 1 drivers
+v01101D18_0 .net "a3", 0 0, L_010B5A08; 1 drivers
+S_0109FAE8 .scope module, "FA4" "Full_Adder_Structural_Verilog" 3 27, 4 4, S_0109E9E8;
+ .timescale -8 -11;
+L_010AA940 .functor XOR 1, L_01102590, L_011025E8, C4<0>, C4<0>;
+L_010AA588 .functor AND 1, L_01102590, L_011025E8, C4<1>, C4<1>;
+L_010BEA88 .functor AND 1, L_010AA940, L_01102A08, C4<1>, C4<1>;
+L_010BE890 .functor OR 1, L_010AA588, L_010BEA88, C4<0>, C4<0>;
+L_010BE970 .functor XOR 1, L_010AA940, L_01102A08, C4<0>, C4<0>;
+v01101B60_0 .net "Cin", 0 0, L_01102A08; 1 drivers
+v01101BB8_0 .net "Cout", 0 0, L_010BE890; 1 drivers
+v01101168_0 .net "S", 0 0, L_010BE970; 1 drivers
+v011011C0_0 .net "X1", 0 0, L_01102590; 1 drivers
+v011015E0_0 .net "X2", 0 0, L_011025E8; 1 drivers
+v011018F8_0 .net "a1", 0 0, L_010AA940; 1 drivers
+v01101690_0 .net "a2", 0 0, L_010AA588; 1 drivers
+v01101270_0 .net "a3", 0 0, L_010BEA88; 1 drivers
+S_010A0148 .scope module, "FA5" "Full_Adder_Structural_Verilog" 3 30, 4 4, S_0109E9E8;
+ .timescale -8 -11;
+L_010BEA18 .functor XOR 1, L_01102640, L_01102AB8, C4<0>, C4<0>;
+L_010BEE78 .functor AND 1, L_01102640, L_01102AB8, C4<1>, C4<1>;
+L_010BEC48 .functor AND 1, L_010BEA18, L_01102698, C4<1>, C4<1>;
+L_010BED60 .functor OR 1, L_010BEE78, L_010BEC48, C4<0>, C4<0>;
+L_010BEE08 .functor XOR 1, L_010BEA18, L_01102698, C4<0>, C4<0>;
+v01101A58_0 .net "Cin", 0 0, L_01102698; 1 drivers
+v011013D0_0 .net "Cout", 0 0, L_010BED60; 1 drivers
+v01101378_0 .net "S", 0 0, L_010BEE08; 1 drivers
+v011018A0_0 .net "X1", 0 0, L_01102640; 1 drivers
+v01101AB0_0 .net "X2", 0 0, L_01102AB8; 1 drivers
+v01101C10_0 .net "a1", 0 0, L_010BEA18; 1 drivers
+v01101530_0 .net "a2", 0 0, L_010BEE78; 1 drivers
+v01101B08_0 .net "a3", 0 0, L_010BEC48; 1 drivers
+S_0109FFB0 .scope module, "FA6" "Full_Adder_Structural_Verilog" 3 33, 4 4, S_0109E9E8;
+ .timescale -8 -11;
+L_010BEF58 .functor XOR 1, L_01102748, L_01102958, C4<0>, C4<0>;
+L_010BEB68 .functor AND 1, L_01102748, L_01102958, C4<1>, C4<1>;
+L_010BEAF8 .functor AND 1, L_010BEF58, L_01102C18, C4<1>, C4<1>;
+L_010BEBA0 .functor OR 1, L_010BEB68, L_010BEAF8, C4<0>, C4<0>;
+L_010BEFC8 .functor XOR 1, L_010BEF58, L_01102C18, C4<0>, C4<0>;
+v01101638_0 .net "Cin", 0 0, L_01102C18; 1 drivers
+v01101588_0 .net "Cout", 0 0, L_010BEBA0; 1 drivers
+v01101320_0 .net "S", 0 0, L_010BEFC8; 1 drivers
+v01101480_0 .net "X1", 0 0, L_01102748; 1 drivers
+v011012C8_0 .net "X2", 0 0, L_01102958; 1 drivers
+v011017F0_0 .net "a1", 0 0, L_010BEF58; 1 drivers
+v01101218_0 .net "a2", 0 0, L_010BEB68; 1 drivers
+v01101A00_0 .net "a3", 0 0, L_010BEAF8; 1 drivers
+S_010A0038 .scope module, "FA7" "Full_Adder_Structural_Verilog" 3 36, 4 4, S_0109E9E8;
+ .timescale -8 -11;
+L_011043E0 .functor XOR 1, L_01102328, L_01103610, C4<0>, C4<0>;
+L_01104418 .functor AND 1, L_01102328, L_01103610, C4<1>, C4<1>;
+L_01104610 .functor AND 1, L_011043E0, L_01103350, C4<1>, C4<1>;
+L_01104530 .functor OR 1, L_01104418, L_01104610, C4<0>, C4<0>;
+L_011044C0 .functor XOR 1, L_011043E0, L_01103350, C4<0>, C4<0>;
+v01100E70_0 .net "Cin", 0 0, L_01103350; 1 drivers
+v01100D68_0 .net "Cout", 0 0, L_01104530; 1 drivers
+v01100EC8_0 .net "S", 0 0, L_011044C0; 1 drivers
+v01100F20_0 .net "X1", 0 0, L_01102328; 1 drivers
+v011014D8_0 .net "X2", 0 0, L_01103610; 1 drivers
+v011019A8_0 .net "a1", 0 0, L_011043E0; 1 drivers
+v01101428_0 .net "a2", 0 0, L_01104418; 1 drivers
+v01101848_0 .net "a3", 0 0, L_01104610; 1 drivers
+S_0109FF28 .scope module, "FA8" "Full_Adder_Structural_Verilog" 3 39, 4 4, S_0109E9E8;
+ .timescale -8 -11;
+L_01104728 .functor XOR 1, L_01102E80, L_01102E28, C4<0>, C4<0>;
+L_011041E8 .functor AND 1, L_01102E80, L_01102E28, C4<1>, C4<1>;
+L_01104680 .functor AND 1, L_01104728, L_01103248, C4<1>, C4<1>;
+L_01104760 .functor OR 1, L_011041E8, L_01104680, C4<0>, C4<0>;
+L_011041B0 .functor XOR 1, L_01104728, L_01103248, C4<0>, C4<0>;
+v01100FD0_0 .net "Cin", 0 0, L_01103248; 1 drivers
+v011010D8_0 .net "Cout", 0 0, L_01104760; 1 drivers
+v01100E18_0 .net "S", 0 0, L_011041B0; 1 drivers
+v01100C60_0 .net "X1", 0 0, L_01102E80; 1 drivers
+v01100D10_0 .net "X2", 0 0, L_01102E28; 1 drivers
+v01101028_0 .net "a1", 0 0, L_01104728; 1 drivers
+v01101080_0 .net "a2", 0 0, L_011041E8; 1 drivers
+v01100CB8_0 .net "a3", 0 0, L_01104680; 1 drivers
+S_010A00C0 .scope module, "FA9" "Full_Adder_Structural_Verilog" 3 42, 4 4, S_0109E9E8;
+ .timescale -8 -11;
+L_01104338 .functor XOR 1, L_01103038, L_01102D20, C4<0>, C4<0>;
+L_01104178 .functor AND 1, L_01103038, L_01102D20, C4<1>, C4<1>;
+L_011048E8 .functor AND 1, L_01104338, L_01103090, C4<1>, C4<1>;
+L_011048B0 .functor OR 1, L_01104178, L_011048E8, C4<0>, C4<0>;
+L_01104E18 .functor XOR 1, L_01104338, L_01103090, C4<0>, C4<0>;
+v01100AA8_0 .net "Cin", 0 0, L_01103090; 1 drivers
+v01100BB0_0 .net "Cout", 0 0, L_011048B0; 1 drivers
+v01100B58_0 .net "S", 0 0, L_01104E18; 1 drivers
+v01100528_0 .net "X1", 0 0, L_01103038; 1 drivers
+v011001B8_0 .net "X2", 0 0, L_01102D20; 1 drivers
+v01100210_0 .net "a1", 0 0, L_01104338; 1 drivers
+v01100F78_0 .net "a2", 0 0, L_01104178; 1 drivers
+v01100DC0_0 .net "a3", 0 0, L_011048E8; 1 drivers
+S_0109FEA0 .scope module, "FA10" "Full_Adder_Structural_Verilog" 3 45, 4 4, S_0109E9E8;
+ .timescale -8 -11;
+L_01105010 .functor XOR 1, L_01102F88, L_011031F0, C4<0>, C4<0>;
+L_01105048 .functor AND 1, L_01102F88, L_011031F0, C4<1>, C4<1>;
+L_01104EC0 .functor AND 1, L_01105010, L_01102D78, C4<1>, C4<1>;
+L_01104EF8 .functor OR 1, L_01105048, L_01104EC0, C4<0>, C4<0>;
+L_01104F30 .functor XOR 1, L_01105010, L_01102D78, C4<0>, C4<0>;
+v011008F0_0 .net "Cin", 0 0, L_01102D78; 1 drivers
+v01100948_0 .net "Cout", 0 0, L_01104EF8; 1 drivers
+v011004D0_0 .net "S", 0 0, L_01104F30; 1 drivers
+v01100370_0 .net "X1", 0 0, L_01102F88; 1 drivers
+v011003C8_0 .net "X2", 0 0, L_011031F0; 1 drivers
+v01100420_0 .net "a1", 0 0, L_01105010; 1 drivers
+v01100B00_0 .net "a2", 0 0, L_01105048; 1 drivers
+v01100478_0 .net "a3", 0 0, L_01104EC0; 1 drivers
+S_0109FC80 .scope module, "FA11" "Full_Adder_Structural_Verilog" 3 48, 4 4, S_0109E9E8;
+ .timescale -8 -11;
+L_01104BE8 .functor XOR 1, L_011036C0, L_01103508, C4<0>, C4<0>;
+L_01104C58 .functor AND 1, L_011036C0, L_01103508, C4<1>, C4<1>;
+L_01104CC8 .functor AND 1, L_01104BE8, L_01103458, C4<1>, C4<1>;
+L_01104B40 .functor OR 1, L_01104C58, L_01104CC8, C4<0>, C4<0>;
+L_01104A60 .functor XOR 1, L_01104BE8, L_01103458, C4<0>, C4<0>;
+v01100268_0 .net "Cin", 0 0, L_01103458; 1 drivers
+v011006E0_0 .net "Cout", 0 0, L_01104B40; 1 drivers
+v01100738_0 .net "S", 0 0, L_01104A60; 1 drivers
+v011005D8_0 .net "X1", 0 0, L_011036C0; 1 drivers
+v01100580_0 .net "X2", 0 0, L_01103508; 1 drivers
+v01100840_0 .net "a1", 0 0, L_01104BE8; 1 drivers
+v01100160_0 .net "a2", 0 0, L_01104C58; 1 drivers
+v01100A50_0 .net "a3", 0 0, L_01104CC8; 1 drivers
+S_010A0720 .scope module, "FA12" "Full_Adder_Structural_Verilog" 3 51, 4 4, S_0109E9E8;
+ .timescale -8 -11;
+L_011050B8 .functor XOR 1, L_011032A0, L_01102FE0, C4<0>, C4<0>;
+L_01105080 .functor AND 1, L_011032A0, L_01102FE0, C4<1>, C4<1>;
+L_01105850 .functor AND 1, L_011050B8, L_01102C70, C4<1>, C4<1>;
+L_01105460 .functor OR 1, L_01105080, L_01105850, C4<0>, C4<0>;
+L_01105498 .functor XOR 1, L_011050B8, L_01102C70, C4<0>, C4<0>;
+v01100790_0 .net "Cin", 0 0, L_01102C70; 1 drivers
+v01100C08_0 .net "Cout", 0 0, L_01105460; 1 drivers
+v01100688_0 .net "S", 0 0, L_01105498; 1 drivers
+v011009F8_0 .net "X1", 0 0, L_011032A0; 1 drivers
+v011007E8_0 .net "X2", 0 0, L_01102FE0; 1 drivers
+v01100898_0 .net "a1", 0 0, L_011050B8; 1 drivers
+v011009A0_0 .net "a2", 0 0, L_01105080; 1 drivers
+v01100318_0 .net "a3", 0 0, L_01105850; 1 drivers
+S_0109FE18 .scope module, "FA13" "Full_Adder_Structural_Verilog" 3 54, 4 4, S_0109E9E8;
+ .timescale -8 -11;
+L_01105268 .functor XOR 1, L_011035B8, L_01103198, C4<0>, C4<0>;
+L_011051F8 .functor AND 1, L_011035B8, L_01103198, C4<1>, C4<1>;
+L_01105310 .functor AND 1, L_01105268, L_01102DD0, C4<1>, C4<1>;
+L_011053B8 .functor OR 1, L_011051F8, L_01105310, C4<0>, C4<0>;
+L_01105578 .functor XOR 1, L_01105268, L_01102DD0, C4<0>, C4<0>;
+v010FFCB0_0 .net "Cin", 0 0, L_01102DD0; 1 drivers
+v010FFFC8_0 .net "Cout", 0 0, L_011053B8; 1 drivers
+v010FFDB8_0 .net "S", 0 0, L_01105578; 1 drivers
+v010FFF18_0 .net "X1", 0 0, L_011035B8; 1 drivers
+v010FFF70_0 .net "X2", 0 0, L_01103198; 1 drivers
+v01100020_0 .net "a1", 0 0, L_01105268; 1 drivers
+v01100630_0 .net "a2", 0 0, L_011051F8; 1 drivers
+v011002C0_0 .net "a3", 0 0, L_01105310; 1 drivers
+S_0109FD90 .scope module, "FA14" "Full_Adder_Structural_Verilog" 3 57, 4 4, S_0109E9E8;
+ .timescale -8 -11;
+L_011051C0 .functor XOR 1, L_01107618, L_01107670, C4<0>, C4<0>;
+L_01105348 .functor AND 1, L_01107618, L_01107670, C4<1>, C4<1>;
+L_011053F0 .functor AND 1, L_011051C0, L_01106FE8, C4<1>, C4<1>;
+L_011055B0 .functor OR 1, L_01105348, L_011053F0, C4<0>, C4<0>;
+L_01105888 .functor XOR 1, L_011051C0, L_01106FE8, C4<0>, C4<0>;
+v010FFD08_0 .net "Cin", 0 0, L_01106FE8; 1 drivers
+v011000D0_0 .net "Cout", 0 0, L_011055B0; 1 drivers
+v010FFD60_0 .net "S", 0 0, L_01105888; 1 drivers
+v010FFE68_0 .net "X1", 0 0, L_01107618; 1 drivers
+v010FFEC0_0 .net "X2", 0 0, L_01107670; 1 drivers
+v010FFE10_0 .net "a1", 0 0, L_011051C0; 1 drivers
+v010FFC58_0 .net "a2", 0 0, L_01105348; 1 drivers
+v01100078_0 .net "a3", 0 0, L_011053F0; 1 drivers
+S_0109FA60 .scope module, "FA15" "Full_Adder_Structural_Verilog" 3 60, 4 4, S_0109E9E8;
+ .timescale -8 -11;
+L_01107CA8 .functor XOR 1, L_01106F90, L_01107040, C4<0>, C4<0>;
+L_01107D18 .functor AND 1, L_01106F90, L_01107040, C4<1>, C4<1>;
+L_01107BC8 .functor AND 1, L_01107CA8, L_011076C8, C4<1>, C4<1>;
+L_01107AB0 .functor OR 1, L_01107D18, L_01107BC8, C4<0>, C4<0>;
+L_01107CE0 .functor XOR 1, L_01107CA8, L_011076C8, C4<0>, C4<0>;
+v010FFB50_0 .net "Cin", 0 0, L_011076C8; 1 drivers
+v010FFBA8_0 .net "Cout", 0 0, L_01107AB0; 1 drivers
+v010FFAA0_0 .net "S", 0 0, L_01107CE0; 1 drivers
+v010FFAF8_0 .net "X1", 0 0, L_01106F90; 1 drivers
+v010FFC00_0 .net "X2", 0 0, L_01107040; 1 drivers
+v010FF1B0_0 .net "a1", 0 0, L_01107CA8; 1 drivers
+v010FF2B8_0 .net "a2", 0 0, L_01107D18; 1 drivers
+v010FF310_0 .net "a3", 0 0, L_01107BC8; 1 drivers
+S_0109FBF8 .scope module, "FA16" "Full_Adder_Structural_Verilog" 3 63, 4 4, S_0109E9E8;
+ .timescale -8 -11;
+L_01107C38 .functor XOR 1, L_01107828, L_01107460, C4<0>, C4<0>;
+L_01107E30 .functor AND 1, L_01107828, L_01107460, C4<1>, C4<1>;
+L_01107F48 .functor AND 1, L_01107C38, L_011077D0, C4<1>, C4<1>;
+L_01107FF0 .functor OR 1, L_01107E30, L_01107F48, C4<0>, C4<0>;
+L_01107D50 .functor XOR 1, L_01107C38, L_011077D0, C4<0>, C4<0>;
+v010FF158_0 .net "Cin", 0 0, L_011077D0; 1 drivers
+v010FF998_0 .net "Cout", 0 0, L_01107FF0; 1 drivers
+v010FF418_0 .net "S", 0 0, L_01107D50; 1 drivers
+v010FF520_0 .net "X1", 0 0, L_01107828; 1 drivers
+v010FF680_0 .net "X2", 0 0, L_01107460; 1 drivers
+v010FF7E0_0 .net "a1", 0 0, L_01107C38; 1 drivers
+v010FFA48_0 .net "a2", 0 0, L_01107E30; 1 drivers
+v010FF260_0 .net "a3", 0 0, L_01107F48; 1 drivers
+S_010A07A8 .scope module, "FA17" "Full_Adder_Structural_Verilog" 3 66, 4 4, S_0109E9E8;
+ .timescale -8 -11;
+L_01107ED8 .functor XOR 1, L_011071A0, L_01107358, C4<0>, C4<0>;
+L_01107B20 .functor AND 1, L_011071A0, L_01107358, C4<1>, C4<1>;
+L_01107F80 .functor AND 1, L_01107ED8, L_01107880, C4<1>, C4<1>;
+L_01108098 .functor OR 1, L_01107B20, L_01107F80, C4<0>, C4<0>;
+L_01108830 .functor XOR 1, L_01107ED8, L_01107880, C4<0>, C4<0>;
+v010FF838_0 .net "Cin", 0 0, L_01107880; 1 drivers
+v010FF578_0 .net "Cout", 0 0, L_01108098; 1 drivers
+v010FF368_0 .net "S", 0 0, L_01108830; 1 drivers
+v010FF6D8_0 .net "X1", 0 0, L_011071A0; 1 drivers
+v010FF3C0_0 .net "X2", 0 0, L_01107358; 1 drivers
+v010FF628_0 .net "a1", 0 0, L_01107ED8; 1 drivers
+v010FF788_0 .net "a2", 0 0, L_01107B20; 1 drivers
+v010FF890_0 .net "a3", 0 0, L_01107F80; 1 drivers
+S_010A02E0 .scope module, "FA18" "Full_Adder_Structural_Verilog" 3 69, 4 4, S_0109E9E8;
+ .timescale -8 -11;
+L_011086A8 .functor XOR 1, L_011070F0, L_011074B8, C4<0>, C4<0>;
+L_01108408 .functor AND 1, L_011070F0, L_011074B8, C4<1>, C4<1>;
+L_01108398 .functor AND 1, L_011086A8, L_01107408, C4<1>, C4<1>;
+L_011087C0 .functor OR 1, L_01108408, L_01108398, C4<0>, C4<0>;
+L_01108868 .functor XOR 1, L_011086A8, L_01107408, C4<0>, C4<0>;
+v010FF8E8_0 .net "Cin", 0 0, L_01107408; 1 drivers
+v010FF5D0_0 .net "Cout", 0 0, L_011087C0; 1 drivers
+v010FF9F0_0 .net "S", 0 0, L_01108868; 1 drivers
+v010FF730_0 .net "X1", 0 0, L_011070F0; 1 drivers
+v010FF4C8_0 .net "X2", 0 0, L_011074B8; 1 drivers
+v010FF208_0 .net "a1", 0 0, L_011086A8; 1 drivers
+v010FF470_0 .net "a2", 0 0, L_01108408; 1 drivers
+v010FF940_0 .net "a3", 0 0, L_01108398; 1 drivers
+S_010A01D0 .scope module, "FA19" "Full_Adder_Structural_Verilog" 3 72, 4 4, S_0109E9E8;
+ .timescale -8 -11;
+L_01108600 .functor XOR 1, L_01107568, L_01106018, C4<0>, C4<0>;
+L_01108638 .functor AND 1, L_01107568, L_01106018, C4<1>, C4<1>;
+L_011086E0 .functor AND 1, L_01108600, L_01106330, C4<1>, C4<1>;
+L_011083D0 .functor OR 1, L_01108638, L_011086E0, C4<0>, C4<0>;
+L_011082B8 .functor XOR 1, L_01108600, L_01106330, C4<0>, C4<0>;
+v010FF070_0 .net "Cin", 0 0, L_01106330; 1 drivers
+v010FEE08_0 .net "Cout", 0 0, L_011083D0; 1 drivers
+v010FF0C8_0 .net "S", 0 0, L_011082B8; 1 drivers
+v010FED00_0 .net "X1", 0 0, L_01107568; 1 drivers
+v010FEC50_0 .net "X2", 0 0, L_01106018; 1 drivers
+v010FEE60_0 .net "a1", 0 0, L_01108600; 1 drivers
+v010FEFC0_0 .net "a2", 0 0, L_01108638; 1 drivers
+v010FECA8_0 .net "a3", 0 0, L_011086E0; 1 drivers
+S_0109FD08 .scope module, "FA20" "Full_Adder_Structural_Verilog" 3 75, 4 4, S_0109E9E8;
+ .timescale -8 -11;
+L_011084E8 .functor XOR 1, L_01105DB0, L_011062D8, C4<0>, C4<0>;
+L_01108910 .functor AND 1, L_01105DB0, L_011062D8, C4<1>, C4<1>;
+L_01109700 .functor AND 1, L_011084E8, L_01105F10, C4<1>, C4<1>;
+L_01109738 .functor OR 1, L_01108910, L_01109700, C4<0>, C4<0>;
+L_011096C8 .functor XOR 1, L_011084E8, L_01105F10, C4<0>, C4<0>;
+v010FE8E0_0 .net "Cin", 0 0, L_01105F10; 1 drivers
+v010FE938_0 .net "Cout", 0 0, L_01109738; 1 drivers
+v010FEDB0_0 .net "S", 0 0, L_011096C8; 1 drivers
+v010FEF10_0 .net "X1", 0 0, L_01105DB0; 1 drivers
+v010FED58_0 .net "X2", 0 0, L_011062D8; 1 drivers
+v010FEEB8_0 .net "a1", 0 0, L_011084E8; 1 drivers
+v010FF018_0 .net "a2", 0 0, L_01108910; 1 drivers
+v010FEF68_0 .net "a3", 0 0, L_01109700; 1 drivers
+S_0109F9D8 .scope module, "FA21" "Full_Adder_Structural_Verilog" 3 78, 4 4, S_0109E9E8;
+ .timescale -8 -11;
+L_01109770 .functor XOR 1, L_01106388, L_01105A40, C4<0>, C4<0>;
+L_01109310 .functor AND 1, L_01106388, L_01105A40, C4<1>, C4<1>;
+L_011095E8 .functor AND 1, L_01109770, L_011060C8, C4<1>, C4<1>;
+L_01109230 .functor OR 1, L_01109310, L_011095E8, C4<0>, C4<0>;
+L_01109540 .functor XOR 1, L_01109770, L_011060C8, C4<0>, C4<0>;
+v010FE410_0 .net "Cin", 0 0, L_011060C8; 1 drivers
+v010FE468_0 .net "Cout", 0 0, L_01109230; 1 drivers
+v010FE6D0_0 .net "S", 0 0, L_01109540; 1 drivers
+v010FEAF0_0 .net "X1", 0 0, L_01106388; 1 drivers
+v010FE888_0 .net "X2", 0 0, L_01105A40; 1 drivers
+v010FEB48_0 .net "a1", 0 0, L_01109770; 1 drivers
+v010FE150_0 .net "a2", 0 0, L_01109310; 1 drivers
+v010FE258_0 .net "a3", 0 0, L_011095E8; 1 drivers
+S_0109EEB0 .scope module, "FA22" "Full_Adder_Structural_Verilog" 3 81, 4 4, S_0109E9E8;
+ .timescale -8 -11;
+L_01109150 .functor XOR 1, L_01105AF0, L_01105EB8, C4<0>, C4<0>;
+L_011093F0 .functor AND 1, L_01105AF0, L_01105EB8, C4<1>, C4<1>;
+L_011091C0 .functor AND 1, L_01109150, L_01105D58, C4<1>, C4<1>;
+L_01109460 .functor OR 1, L_011093F0, L_011091C0, C4<0>, C4<0>;
+L_011095B0 .functor XOR 1, L_01109150, L_01105D58, C4<0>, C4<0>;
+v010FEBA0_0 .net "Cin", 0 0, L_01105D58; 1 drivers
+v010FE4C0_0 .net "Cout", 0 0, L_01109460; 1 drivers
+v010FE570_0 .net "S", 0 0, L_011095B0; 1 drivers
+v010FEBF8_0 .net "X1", 0 0, L_01105AF0; 1 drivers
+v010FEA98_0 .net "X2", 0 0, L_01105EB8; 1 drivers
+v010FE200_0 .net "a1", 0 0, L_01109150; 1 drivers
+v010FE830_0 .net "a2", 0 0, L_011093F0; 1 drivers
+v010FE518_0 .net "a3", 0 0, L_011091C0; 1 drivers
+S_0109EE28 .scope module, "FA23" "Full_Adder_Structural_Verilog" 3 84, 4 4, S_0109E9E8;
+ .timescale -8 -11;
+L_011098C0 .functor XOR 1, L_01106178, L_01106280, C4<0>, C4<0>;
+L_011098F8 .functor AND 1, L_01106178, L_01106280, C4<1>, C4<1>;
+L_011097A8 .functor AND 1, L_011098C0, L_01105CA8, C4<1>, C4<1>;
+L_01108D98 .functor OR 1, L_011098F8, L_011097A8, C4<0>, C4<0>;
+L_01109000 .functor XOR 1, L_011098C0, L_01105CA8, C4<0>, C4<0>;
+v010FE3B8_0 .net "Cin", 0 0, L_01105CA8; 1 drivers
+v010FE728_0 .net "Cout", 0 0, L_01108D98; 1 drivers
+v010FE7D8_0 .net "S", 0 0, L_01109000; 1 drivers
+v010FE678_0 .net "X1", 0 0, L_01106178; 1 drivers
+v010FE780_0 .net "X2", 0 0, L_01106280; 1 drivers
+v010FE5C8_0 .net "a1", 0 0, L_011098C0; 1 drivers
+v010FE1A8_0 .net "a2", 0 0, L_011098F8; 1 drivers
+v010FEA40_0 .net "a3", 0 0, L_011097A8; 1 drivers
+S_0109EC90 .scope module, "FA24" "Full_Adder_Structural_Verilog" 3 87, 4 4, S_0109E9E8;
+ .timescale -8 -11;
+L_01108E40 .functor XOR 1, L_011061D0, L_01106438, C4<0>, C4<0>;
+L_01108B30 .functor AND 1, L_011061D0, L_01106438, C4<1>, C4<1>;
+L_01108EB0 .functor AND 1, L_01108E40, L_01105990, C4<1>, C4<1>;
+L_01108A18 .functor OR 1, L_01108B30, L_01108EB0, C4<0>, C4<0>;
+L_01108BD8 .functor XOR 1, L_01108E40, L_01105990, C4<0>, C4<0>;
+v010F9DA0_0 .net "Cin", 0 0, L_01105990; 1 drivers
+v010F9DF8_0 .net "Cout", 0 0, L_01108A18; 1 drivers
+v010FE308_0 .net "S", 0 0, L_01108BD8; 1 drivers
+v010FE360_0 .net "X1", 0 0, L_011061D0; 1 drivers
+v010FE990_0 .net "X2", 0 0, L_01106438; 1 drivers
+v010FE2B0_0 .net "a1", 0 0, L_01108E40; 1 drivers
+v010FE9E8_0 .net "a2", 0 0, L_01108B30; 1 drivers
+v010FE620_0 .net "a3", 0 0, L_01108EB0; 1 drivers
+S_0109ED18 .scope module, "FA25" "Full_Adder_Structural_Verilog" 3 90, 4 4, S_0109E9E8;
+ .timescale -8 -11;
+L_01108A50 .functor XOR 1, L_01105BF8, L_01105C50, C4<0>, C4<0>;
+L_01108C10 .functor AND 1, L_01105BF8, L_01105C50, C4<1>, C4<1>;
+L_01108DD0 .functor AND 1, L_01108A50, L_01105E60, C4<1>, C4<1>;
+L_01108AC0 .functor OR 1, L_01108C10, L_01108DD0, C4<0>, C4<0>;
+L_01108D28 .functor XOR 1, L_01108A50, L_01105E60, C4<0>, C4<0>;
+v010F9F00_0 .net "Cin", 0 0, L_01105E60; 1 drivers
+v010F9E50_0 .net "Cout", 0 0, L_01108AC0; 1 drivers
+v010F9C40_0 .net "S", 0 0, L_01108D28; 1 drivers
+v010F9C98_0 .net "X1", 0 0, L_01105BF8; 1 drivers
+v010F9D48_0 .net "X2", 0 0, L_01105C50; 1 drivers
+v010F9CF0_0 .net "a1", 0 0, L_01108A50; 1 drivers
+v010F9F58_0 .net "a2", 0 0, L_01108C10; 1 drivers
+v010F9EA8_0 .net "a3", 0 0, L_01108DD0; 1 drivers
+S_0109EC08 .scope module, "FA26" "Full_Adder_Structural_Verilog" 3 93, 4 4, S_0109E9E8;
+ .timescale -8 -11;
+L_01109E48 .functor XOR 1, L_01106DD8, L_01106A10, C4<0>, C4<0>;
+L_01109AC8 .functor AND 1, L_01106DD8, L_01106A10, C4<1>, C4<1>;
+L_01109B38 .functor AND 1, L_01109E48, L_01106648, C4<1>, C4<1>;
+L_01109B70 .functor OR 1, L_01109AC8, L_01109B38, C4<0>, C4<0>;
+L_01109C18 .functor XOR 1, L_01109E48, L_01106648, C4<0>, C4<0>;
+v010F9BE8_0 .net "Cin", 0 0, L_01106648; 1 drivers
+v010F9198_0 .net "Cout", 0 0, L_01109B70; 1 drivers
+v010F91F0_0 .net "S", 0 0, L_01109C18; 1 drivers
+v010F92A0_0 .net "X1", 0 0, L_01106DD8; 1 drivers
+v010FA008_0 .net "X2", 0 0, L_01106A10; 1 drivers
+v010FA060_0 .net "a1", 0 0, L_01109E48; 1 drivers
+v010F9FB0_0 .net "a2", 0 0, L_01109AC8; 1 drivers
+v010FA0B8_0 .net "a3", 0 0, L_01109B38; 1 drivers
+S_0109EB80 .scope module, "FA27" "Full_Adder_Structural_Verilog" 3 96, 4 4, S_0109E9E8;
+ .timescale -8 -11;
+L_0110A040 .functor XOR 1, L_01106540, L_01106BC8, C4<0>, C4<0>;
+L_0110A078 .functor AND 1, L_01106540, L_01106BC8, C4<1>, C4<1>;
+L_01109E80 .functor AND 1, L_0110A040, L_01106AC0, C4<1>, C4<1>;
+L_01109EF0 .functor OR 1, L_0110A078, L_01109E80, C4<0>, C4<0>;
+L_011099B0 .functor XOR 1, L_0110A040, L_01106AC0, C4<0>, C4<0>;
+v010F94B0_0 .net "Cin", 0 0, L_01106AC0; 1 drivers
+v010F97C8_0 .net "Cout", 0 0, L_01109EF0; 1 drivers
+v010F9878_0 .net "S", 0 0, L_011099B0; 1 drivers
+v010F99D8_0 .net "X1", 0 0, L_01106540; 1 drivers
+v010F9A30_0 .net "X2", 0 0, L_01106BC8; 1 drivers
+v010F9A88_0 .net "a1", 0 0, L_0110A040; 1 drivers
+v010F9B38_0 .net "a2", 0 0, L_0110A078; 1 drivers
+v010F9B90_0 .net "a3", 0 0, L_01109E80; 1 drivers
+S_0109F730 .scope module, "FA28" "Full_Adder_Structural_Verilog" 3 99, 4 4, S_0109E9E8;
+ .timescale -8 -11;
+L_01109A90 .functor XOR 1, L_011069B8, L_01106800, C4<0>, C4<0>;
+L_01109B00 .functor AND 1, L_011069B8, L_01106800, C4<1>, C4<1>;
+L_0110A0E8 .functor AND 1, L_01109A90, L_01106C78, C4<1>, C4<1>;
+L_0110A580 .functor OR 1, L_01109B00, L_0110A0E8, C4<0>, C4<0>;
+L_0110A628 .functor XOR 1, L_01109A90, L_01106C78, C4<0>, C4<0>;
+v010F96C0_0 .net "Cin", 0 0, L_01106C78; 1 drivers
+v010F9770_0 .net "Cout", 0 0, L_0110A580; 1 drivers
+v010F95B8_0 .net "S", 0 0, L_0110A628; 1 drivers
+v010F9560_0 .net "X1", 0 0, L_011069B8; 1 drivers
+v010F9610_0 .net "X2", 0 0, L_01106800; 1 drivers
+v010F9668_0 .net "a1", 0 0, L_01109A90; 1 drivers
+v010F9350_0 .net "a2", 0 0, L_01109B00; 1 drivers
+v010F9458_0 .net "a3", 0 0, L_0110A0E8; 1 drivers
+S_0109EA70 .scope module, "FA29" "Full_Adder_Structural_Verilog" 3 102, 4 4, S_0109E9E8;
+ .timescale -8 -11;
+L_0110A660 .functor XOR 1, L_01106D80, L_01106858, C4<0>, C4<0>;
+L_0110A740 .functor AND 1, L_01106D80, L_01106858, C4<1>, C4<1>;
+L_0110A158 .functor AND 1, L_0110A660, L_011065F0, C4<1>, C4<1>;
+L_0110A510 .functor OR 1, L_0110A740, L_0110A158, C4<0>, C4<0>;
+L_0110A698 .functor XOR 1, L_0110A660, L_011065F0, C4<0>, C4<0>;
+v010F9400_0 .net "Cin", 0 0, L_011065F0; 1 drivers
+v010F9980_0 .net "Cout", 0 0, L_0110A510; 1 drivers
+v010F9AE0_0 .net "S", 0 0, L_0110A698; 1 drivers
+v010F9820_0 .net "X1", 0 0, L_01106D80; 1 drivers
+v010F92F8_0 .net "X2", 0 0, L_01106858; 1 drivers
+v010F9928_0 .net "a1", 0 0, L_0110A660; 1 drivers
+v010F9508_0 .net "a2", 0 0, L_0110A740; 1 drivers
+v010F9718_0 .net "a3", 0 0, L_0110A158; 1 drivers
+S_0109EAF8 .scope module, "FA30" "Full_Adder_Structural_Verilog" 3 105, 4 4, S_0109E9E8;
+ .timescale -8 -11;
+L_0110A318 .functor XOR 1, L_01106F38, L_01106E30, C4<0>, C4<0>;
+L_0110A2A8 .functor AND 1, L_01106F38, L_01106E30, C4<1>, C4<1>;
+L_0110A200 .functor AND 1, L_0110A318, L_01106CD0, C4<1>, C4<1>;
+L_0110A238 .functor OR 1, L_0110A2A8, L_0110A200, C4<0>, C4<0>;
+L_0110A4D8 .functor XOR 1, L_0110A318, L_01106CD0, C4<0>, C4<0>;
+v010C2EC0_0 .net "Cin", 0 0, L_01106CD0; 1 drivers
+v010C2D08_0 .net "Cout", 0 0, L_0110A238; 1 drivers
+v010C3020_0 .net "S", 0 0, L_0110A4D8; 1 drivers
+v010C2BA8_0 .net "X1", 0 0, L_01106F38; 1 drivers
+v010F98D0_0 .net "X2", 0 0, L_01106E30; 1 drivers
+v010F9248_0 .net "a1", 0 0, L_0110A318; 1 drivers
+v010F9140_0 .net "a2", 0 0, L_0110A2A8; 1 drivers
+v010F93A8_0 .net "a3", 0 0, L_0110A200; 1 drivers
+S_0109F620 .scope module, "FA31" "Full_Adder_Structural_Verilog" 3 108, 4 4, S_0109E9E8;
+ .timescale -8 -11;
+L_0110A890 .functor XOR 1, L_01106EE0, L_01106598, C4<0>, C4<0>;
+L_0110A8C8 .functor AND 1, L_01106EE0, L_01106598, C4<1>, C4<1>;
+L_0110A7E8 .functor AND 1, L_0110A890, L_011066A0, C4<1>, C4<1>;
+L_0110B038 .functor OR 1, L_0110A8C8, L_0110A7E8, C4<0>, C4<0>;
+L_0110B380 .functor XOR 1, L_0110A890, L_011066A0, C4<0>, C4<0>;
+v010C2F70_0 .net "Cin", 0 0, L_011066A0; 1 drivers
+v010C2DB8_0 .alias "Cout", 0 0, v011040B8_0;
+v010C2F18_0 .net "S", 0 0, L_0110B380; 1 drivers
+v010C2FC8_0 .net "X1", 0 0, L_01106EE0; 1 drivers
+v010C2E10_0 .net "X2", 0 0, L_01106598; 1 drivers
+v010C2CB0_0 .net "a1", 0 0, L_0110A890; 1 drivers
+v010C2E68_0 .net "a2", 0 0, L_0110A8C8; 1 drivers
+v010C2C00_0 .net "a3", 0 0, L_0110A7E8; 1 drivers
+    .scope S_0109F2F0;
+T_0 ;
+    %vpi_call 2 16 "$dumpfile", "full_adder_32bit.vcd";
+    %vpi_call 2 17 "$dumpvars", 1'sb0, S_0109F2F0;
+    %set/v v01103FB0_0, 0, 32;
+    %set/v v01104008_0, 0, 32;
+    %set/v v01104060_0, 0, 1;
+    %delay 10000, 0;
+    %set/v v01103FB0_0, 0, 32;
+    %set/v v01104008_0, 0, 32;
+    %set/v v01104060_0, 1, 1;
+    %delay 10000, 0;
+    %movi 8, 1, 32;
+    %set/v v01103FB0_0, 8, 32;
+    %movi 8, 1, 32;
+    %set/v v01104008_0, 8, 32;
+    %set/v v01104060_0, 0, 1;
+    %delay 10000, 0;
+    %movi 8, 1, 32;
+    %set/v v01103FB0_0, 8, 32;
+    %movi 8, 1, 32;
+    %set/v v01104008_0, 8, 32;
+    %set/v v01104060_0, 1, 1;
+    %delay 10000, 0;
+    %set/v v01103FB0_0, 1, 32;
+    %movi 8, 1, 32;
+    %set/v v01104008_0, 8, 32;
+    %set/v v01104060_0, 0, 1;
+    %delay 10000, 0;
+    %set/v v01103FB0_0, 1, 32;
+    %movi 8, 1, 32;
+    %set/v v01104008_0, 8, 32;
+    %set/v v01104060_0, 1, 1;
+    %delay 10000, 0;
+    %set/v v01103FB0_0, 1, 32;
+    %set/v v01104008_0, 1, 32;
+    %set/v v01104060_0, 0, 1;
+    %delay 10000, 0;
+    %set/v v01103FB0_0, 1, 32;
+    %set/v v01104008_0, 1, 32;
+    %set/v v01104060_0, 1, 1;
+    %delay 10000, 0;
+    %vpi_func 2 68 "$random", 8, 32;
+    %set/v v01103FB0_0, 8, 32;
+    %vpi_func 2 69 "$random", 8, 32;
+    %set/v v01104008_0, 8, 32;
+    %vpi_func 2 70 "$random", 8, 32;
+    %movi 40, 2, 32;
+    %mod/s 8, 40, 32;
+    %set/v v01104060_0, 8, 1;
+    %delay 10000, 0;
+    %set/v v01103FB0_0, 0, 32;
+    %set/v v01104008_0, 0, 32;
+    %set/v v01104060_0, 0, 1;
+    %delay 10000, 0;
+    %set/v v01103FB0_0, 1, 32;
+    %set/v v01104008_0, 1, 32;
+    %set/v v01104060_0, 1, 1;
+    %delay 10000, 0;
+    %movi 8, 1, 32;
+    %set/v v01103FB0_0, 8, 32;
+    %movi 8, 2147483647, 32;
+    %set/v v01104008_0, 8, 32;
+    %set/v v01104060_0, 0, 1;
+    %delay 10000, 0;
+    %set/v v01103FB0_0, 1, 32;
+    %set/v v01104008_0, 1, 32;
+    %set/v v01104060_0, 1, 1;
+    %delay 10000, 0;
+    %set/v v01103FB0_0, 0, 32;
+    %set/v v01104008_0, 1, 32;
+    %set/v v01104060_0, 0, 1;
+    %delay 10000, 0;
+    %movi 8, 1431655765, 32;
+    %set/v v01103FB0_0, 8, 32;
+    %movi 8, 2863311530, 32;
+    %set/v v01104008_0, 8, 32;
+    %set/v v01104060_0, 1, 1;
+    %delay 10000, 0;
+    %vpi_call 2 108 "$finish";
+    %end;
+    .thread T_0;
+# The file index is used to find the file name in the following table.
+:file_names 5;
+    "N/A";
+    "<interactive>";
+    "Testbench_Full_Adder_32bit.v";
+    "./Full_Adder_32bit.v";
+    "./Full_Adder_Structural_Verilog.v";
