@@ -7,6 +7,20 @@ $end
 $timescale
 	1s
 $end
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 $scope module sample_circuit_tb $end
 $var wire 1 ! Y $end
 $var reg 1 " A $end
